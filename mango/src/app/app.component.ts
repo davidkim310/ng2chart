@@ -23,20 +23,38 @@ export class AppComponent implements OnInit {
                           category: "",
                           item: ""
                         };
-          // for(let key in data[i]) {
-          // dataArray.push(key);
-          // }
           if(data[i].business){
           dataObj.business = data[i].business
           dataObj.category = data[i].category
           dataObj.item = data[i].item
           dataArray.push(dataObj)
-          // console.log("obj", dataObj)
           }
         }
           this.items = dataArray
           console.log("newArray", this.items)
       }
     )
+  }
+
+  sortCategory() {
+    this.items.sort(function(a, b) {
+      var A = a.category.toUpperCase();
+      var B = b.category.toUpperCase();
+      return (A < B) ? -1 : (A > B) ? 1 : 0;
+});
+  }
+  sortBusiness(){
+    this.items.sort(function(a, b) {
+      var A = a.business.toUpperCase();
+      var B = b.business.toUpperCase();
+      return (A < B) ? -1 : (A > B) ? 1 : 0;
+});
+  }
+  sortItem(){
+    this.items.sort(function(a, b) {
+      var A = a.item.toUpperCase();
+      var B = b.item.toUpperCase();
+      return (A < B) ? -1 : (A > B) ? 1 : 0;
+});
   }
 }

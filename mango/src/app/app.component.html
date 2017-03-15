@@ -4,12 +4,12 @@
 <table style="width:100%">
 <tr>
   <th>
-    <form><input type=submit value="Business name" style="width:100%"></form>
+    <form><input type=submit value="Business name" style="width:100%" (click)="sortBusiness()"></form>
   </th>
   <th>
-    <form><input type=submit value="Category" style="width:100%"></form>
+    <form><input type=submit value="Category" style="width:100%" (click)="sortCategory()"></form>
   </th>
-  <th><form><input type=submit value="Item" style="width:100%"></form></th>
+  <th><form><input type=submit value="Item" style="width:100%" (click)="sortItem()"></form></th>
 </tr>
 <tr *ngFor="let item of items">
   <td>{{item.business}}</td>

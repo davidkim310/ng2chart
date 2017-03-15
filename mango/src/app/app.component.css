@@ -3,3 +3,8 @@ table, th, td {
     border-collapse: collapse;
     padding: 15px;
 }
+
+input {
+    width: 100%;
+}
+
